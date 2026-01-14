@@ -1,0 +1,2 @@
+# informatica
+esercitazioni info
