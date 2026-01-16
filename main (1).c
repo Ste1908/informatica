@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+char stringa_1[100];
+char stringa_2[100];
+int z=3;
+int i=0;
+printf("inerisci il primo cognome:\n");
+scanf("%s", stringa_1);
+printf("inerisci il secondo cognome:\n");
+scanf("%s", stringa_2);
+do{
+if(stringa_1[i]<stringa_2[i]) z=1;
+if(stringa_1[i]>stringa_2[i]) z=0;
+i+=1;
+}while(z==3);
+if(z==0) printf("nomi in ordine alfabetico: \n%s\n%s", stringa_2,stringa_1);
+if(z==1) printf("nomi in ordine alfabetico: \n%s\n%s", stringa_1,stringa_2);
+}
