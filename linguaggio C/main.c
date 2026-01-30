@@ -1,23 +1,21 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
 
 #include <stdio.h>
 
 int main()
 {
 char stringa[100];
-int i=0;
-int conta=0;
+int chiave;
+printf("inserisci la stringa: ");
 scanf("%s", stringa);
-printf("la stringa insertita è: %s\n", stringa);
-do{
-   if(stringa[i]<91&&stringa[i]>64) conta+=1;
-   i+=1;
-}while(stringa[i]|='\0');
-printf("le maiuscole sono: %d", conta);
+printf("inserisci la chiave: ");
+scanf("%d", &chiave);
+for(int i=0; stringa[i]!='\0'; i++){
+    if(stringa[i]+chiave>90){
+        stringa[i]=(chiave-(90-stringa[i]))+64;
+    }else
+{
+    stringa[i]+=chiave;
+}
+   printf("%c", stringa[i]);
+}
 }
