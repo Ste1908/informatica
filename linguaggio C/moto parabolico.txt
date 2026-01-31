@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float a;
+    float v;
+    float t;
+    float pos_x;
+    float pos_y;
+    float tempo;
+    float h;
+    float l;
+    float y_0=0;
+    int p;
+    float g=9.81;
+    float pg=3.14;
+    printf("=== SIMULATORE MOTO PARABOLICO ===\n");
+printf("\ninserisci l'angolo di lancio (in gradi) : ");
+scanf("%f",&a);
+printf("inserisci la velocità iniziale (m/s) : ");
+scanf("%f",&v);
+printf("inserisci il delta_t per la simulazione (s) : ");
+scanf("%f",&t);
+printf("inserisci l'altezza di partenza (m) : ");
+scanf("%f",&y_0);
+printf("inserisci il tipo di lancio: 1-verso l'alto o verso il basso/ 2-orizzontale : ");
+scanf("%d",&p);
+a=a*(pg/180);
+tempo=(2*v*/*sb*/sin(a))/g;
+h=pow(v*sin(a), 2)/(2*g);
+l=pow(v,2)/g;
+printf("\n=== DATI CALCOLATI ===\n");
+printf("Tempo di volo: %.3f s \nGittata max: %.3f m\nAltezza max: %.3f m\n", tempo,l,h);
+l=t;
+printf("\n=== TRAIETTORIA ===\n");
+printf("t (s)     pos_x (m)     pos_y (m)\n");
+printf("---------------------------------\n");
+printf("0.000     0.000         %.3f\n",y_0);
+while(t<tempo){
+pos_x=(v*cos(a))*t;
+if(p==1){pos_y=(v*sin(a))*t-0.5*g*pow(t,2)+y_0;}
+else {pos_y=y_0-0.5*g*pow(t,2);}
+printf("%.3f     %.3f         %.3f\n", t, pos_x, pos_y);
+t=t+l;
+}
+}

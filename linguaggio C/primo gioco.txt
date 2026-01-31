@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h> 
+int main()
+{
+    float a;
+    float v;
+    int l;
+    int conta=1;
+    int k;
+    printf("inserisci la distanza massima a cui si può trovare il bersaglio: ");
+    scanf("%d",&k);
+    printf("=====================\n");
+    srand(time(NULL));
+   int numero_casuale=(rand()% k) + 1;
+printf("\ninserisci l'angolo di lancio (in gradi) : ");
+scanf("%f",&a);
+printf("inserisci la velocità iniziale (m/s) : ");
+scanf("%f",&v);
+a=a*(3.14/180);
+l=pow(v,2)/9.81;
+do{
+    if(l<numero_casuale){printf("troppo corto, riprova\n");
+    printf("=====================");
+        printf("\ninserisci l'angolo di lancio (in gradi) : ");
+scanf("%f",&a);
+printf("inserisci la velocità iniziale (m/s) : ");
+scanf("%f",&v);
+a=a*(3.14/180);
+l=pow(v,2)/9.81;
+conta=conta+1;
+    }
+    else{
+        printf("troppo lungo, riprova\n");
+        printf("=====================");
+        printf("\ninserisci l'angolo di lancio (in gradi) : ");
+scanf("%f",&a);
+printf("inserisci la velocità iniziale (m/s) : ");
+scanf("%f",&v);
+a=a*(3.14/180);
+l=pow(v,2)/9.81;
+conta=conta+1;
+    }
+}while(l!=numero_casuale);
+if(l==numero_casuale){
+        printf("=====================\n");
+        printf("Complimenti!! hai vinto in %d tentativi\nil bersaglio era proprio in questa posizione: %d m",conta,l);
+    }
+}

@@ -1,0 +1,81 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int
+main ()
+{
+  int a;
+  int conta;
+  int y;
+  int x;
+  int b;
+  int c;
+  int g;
+  int o;
+  int d;
+  int p;
+  int somma;
+  int media;
+  somma = 0;
+  conta = 0;
+  y=0;
+  g=0;
+  o=0;
+  x=0;
+  b=0;
+  c=0;
+  scanf ("%d", &a);
+  while (a != 0 || conta <15 || somma<100)
+	{
+	    printf("%d",a);
+	    if(a%2==0)
+	    {
+	        printf(" il numero è pari");
+	        y++;
+	        g=g+a;
+	    }
+	    else
+	    {
+	        printf("il numero è dispari");
+	        x++;
+	        o=o+a;
+	    }
+	    if(a>-1)
+	    {
+	        b++;
+	    }
+	    else
+	    {
+	        c++;
+	    }
+	    somma = somma + a;
+	    conta++;
+	    printf("la quantità dei numeri pari inseriti è : %d", y);
+	    printf("la quantità dei numeri dispari inseriti è : %d", x);
+	    printf("la quantità dei numeri positivi inseriti è : %d", b);
+	    printf("la quantità dei numeri negativi inseriti è : %d", c);
+	    printf("il numero di interazioni è : %d", conta);
+	  scanf ("%d", &a);
+	  
+	  
+	}
+	media=somma/conta;
+	p=g/y;
+	d=o/x;
+ printf("la quantità dei numeri pari inseriti è : %d", y);
+	    printf("la quantità dei numeri dispari inseriti è : %d", x);
+	    printf("la quantità dei numeri positivi inseriti è : %d", b);
+	    printf("la quantità dei numeri negativi inseriti è : %d", c);
+	    printf("la quantità dei numeri inseriti è : %d", conta);
+  printf (" la media tra i numeri dispari è: %d", d);
+  printf (" la media tra i numeri pari è: %d", p);
+  printf (" la media totale è: %d", media);
+  
+}

@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    float b=1;
+    float a=0;
+    int n;
+    printf("inserire un numero \n");
+    scanf("%d", &n);
+    for(int c=0;c<=n;c++)
+    {
+       if(c%2==0&&c>=2){
+           a=b+a;
+           printf("%.2f ",a);
+       }
+       if(c%2==1&&c>=2){
+           b=b+a;
+           printf("%.2f ",b);
+       }if(c==0) printf("%.2f ",a);
+       if(c==1) printf("%.2f",b);
+    }
+    printf("\n");
+    a=1;
+    b=1;
+    for(int c=0;c<=n;c++)
+    {
+       if(c%2==0&&c>=2){
+           printf("%.2f ",a/b);
+           b=b+a;
+       }
+       if(c%2==1&&c>=2){
+        printf("%.2f ",b/a);  
+           a=b+a;
+       }
+    }
+}

@@ -1,0 +1,49 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+void media()
+{
+    int n;
+    printf("quanti voti ci sono\n");
+    scanf("%d",&n);
+    float a[n];
+    float somma;
+    float b;
+    somma=0;
+printf("inserire i voti\n");
+for(int z=0;z<n;z++)
+{
+    printf("inserire il %d voto\n",z);
+    scanf("%f",&a[z]);
+    somma=somma+a[z];
+}
+b=somma/n;
+printf("la media è:%f\n",b);
+}
+
+int main()
+{
+    int h;
+    h=1;
+    printf("%d ragazzo\n", h);
+media();
+h=h+1;
+printf("%d ragazzo\n", h);
+media();
+h=h+1;
+printf("%d ragazzo\n", h);
+media();
+h=h+1;
+printf("%d ragazzo\n", h);
+media();
+h=h+1;
+printf("%d ragazzo\n", h);
+media();
+h=h+1;
+}

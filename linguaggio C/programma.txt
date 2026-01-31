@@ -1,0 +1,88 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int x;
+    int somma=0;
+    int z=0;
+printf("inserire un numero primo \n");
+scanf("%d",&x);
+/*mostare il numero*/
+printf("il numero inserito è: %d \n", x);
+/* test pari o dispari*/
+if(x%2==0)
+{
+    printf("il numero è pari \n");
+}
+else
+{
+    printf("il numero inserito è dispari \n");
+}
+/*test numero primo*/
+for(int conta=3;conta<x;conta=conta+2)
+{
+    if(x%conta==0||x%2==0)
+    {
+        z=1;
+        conta=x;
+    }
+}
+if(z==0)
+{
+    printf("%d è un numero primo\n", x);
+}
+else
+{
+    printf("%d non è un numero primo\n", x);
+}
+/*quantità dei numeri*/
+printf("i numeri contenuti tra [0;%d] sono %d \n", x, x+1);
+printf("i numeri pari sono %d\n",x/2+1);
+if(x%2==0){
+printf("i numeri dispari sono %d\n", x/2);
+}
+else printf("i numeri dispari sono %d\n", (x+1)/2);
+printf("i numeri pari sono: ");
+/* stampa dei numeri*/
+for(int c=0;c<=x;c=c+2)
+{
+   
+    if(c%2==0)
+    {
+        printf(" %d", c);
+    }
+}
+
+printf("\ni numeri dispari sono: ");
+for(int c=1;c<=x;c=c+2)
+    {
+        if(c%2==1)
+        {
+        printf(" %d",c);
+        }
+    }
+   /*+++ printf("\ni numeri da %d a 0 sono: ", x);
+  for(int c=x;c>=0;c--)
+    {
+        printf(" %d", c);
+    }
+*/
+/*somma dei numeri*/
+if(x%2==0)
+{
+    printf("\nla somma da 0 a %d é: %d", x, x*(x/2+1)-x/2);
+}
+else
+{
+    printf("\nla somma da 0 a %d é: %d", x, x*(x/2+1));
+}
+    return 0;
+}

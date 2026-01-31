@@ -1,0 +1,36 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+//#include <stdlib.h>
+
+int main()
+{
+int dadi;
+int pos_iniziale;
+int pos_finale;
+ printf("inserire la posizione di partenza: ");
+ scanf("%d",& pos_iniziale);
+ //srand(dadi);
+ //dadi=(rand()%6)*2;
+ printf("inserire la somma dei dadi: ");
+ scanf("%d",& dadi);
+/*if(pos_iniziale+dadi<=63) {pos_finale=pos_iniziale+dadi;
+ printf("\n%d", pos_finale);}
+ else{
+     dadi=dadi-(63-pos_iniziale);
+     pos_finale=63-dadi;
+     printf("%d", pos_finale);*/
+     
+         pos_finale=pos_iniziale+dadi;
+         do{
+             dadi=pos_finale-63;
+             pos_finale=63-dadi;
+         }while(pos_finale>63);
+     printf("%d",pos_finale);
+ }

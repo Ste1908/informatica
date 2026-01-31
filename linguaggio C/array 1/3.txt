@@ -1,0 +1,28 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main ()
+
+{
+  int x[10];
+  int somma;
+  float media;
+  somma = 0;
+  for (int z = 0; z < 10; z++)
+	{
+	  scanf ("%d", &x[z]);
+	  somma = somma+ x[z];
+	
+	}
+	media=somma/10;
+	  printf("la media è: %f", media);
+
+
+}

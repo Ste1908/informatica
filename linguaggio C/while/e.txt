@@ -1,0 +1,45 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int
+main ()
+{
+  int a;
+  int conta;
+  int somma;
+  int media;
+  somma = 0;
+  conta = 0;
+  scanf ("%d", &a);
+  while (a != 0 && conta <15 && somma<100)
+	{
+	    somma = somma + a;
+	  scanf ("%d", &a);
+	  conta++;
+	  
+	}
+	media=somma/conta;
+
+  if (a == 0)
+	{
+	  printf ("sei uscito per aver inserito 0");
+	}
+  if (conta == 15)
+	{
+	  printf ("sei uscito per aver inserito 15 numeri");
+	}
+  if (somma > 100)
+	{
+	  printf ("sei uscito perchè la somma è maggiore di 100");
+	}
+  printf (" la media è: %d", media);
+  printf (" il numero delle interazioni fatte é: %d", conta);
+}
+
