@@ -1,0 +1,19 @@
+package progetto_java;
+
+import java.util.Scanner;
+
+public class codice_prova {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("inserisci un numero positivo intero");
+		int numero=scanner.nextInt();
+		
+		int prodotto=1;
+		for(int contatore=numero;contatore>0;contatore--) {
+			prodotto=prodotto*contatore;
+		}
+	System.out.println("il fattoriale di "+ numero+ " è "+ prodotto);
+	}
+
+}

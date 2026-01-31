@@ -1,0 +1,23 @@
+package progetto_java;
+
+import java.util.Scanner;
+
+public class codice_prova {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("inserisci due numeri positivi interi");
+		int numero_1=scanner.nextInt();
+		int numero_2=scanner.nextInt();
+		
+		int prodotto=0;
+		for(int contatore=1;contatore<=numero_2;contatore++) {
+			prodotto=prodotto+numero_1;
+		}
+		if(numero_1==0||numero_2==0) prodotto=0;
+		if(numero_1==1) prodotto=numero_2;
+		if(numero_2==1) prodotto=numero_1;
+System.out.println("il prodotto tra " + numero_1 + " e " + numero_2 + " è " + prodotto);
+	}
+
+}
