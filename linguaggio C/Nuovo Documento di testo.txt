@@ -1,44 +1,15 @@
-/******************************************************************************
-
-                            Online C Compiler.
-                Code, Compile, Run and Debug C program online.
-Write your code in this editor and press "Run" button to compile and execute it.
-
-*******************************************************************************/
-
 #include <stdio.h>
-int main ()
+
+int main()
 {
-    int a;
-    int b;
-    printf("quanti ragazzi ci sono?");
-    scanf("%d", &a);   
-    printf("quanti voti sono?\n");
-    scanf("%d",&b);
-    float h[a][b];
-    int c;
-    int d;
-    float somma;
-    float media;
-    printf("cosa si vuole fare? 0-inserisci i voti, 1-cercare i voti, 2-cercare l'esito di un ragazzo, 3-visualizzare le statistiche\n");
-   scanf("%d",&c);
-    switch (c);
-    {
-    case 0:
-printf("di quale ragazzo si vogliono inserire i voti?");
-scanf("%d",&d);
-somma=0;
-for(int e=0;e<b;e++);
-{
-    printf("inserisci il voto");
-    scanf("%f",&h[d][e]);
-   somma=somma+h[d][e];
-}
-media=somma/b;
-printf("la media è: %.2f", media);
-break
-case 1:
-    case 2:
-    case 3:
-    }
+char stringa[100];
+int i=0;
+int conta=0;
+scanf("%s", stringa);
+printf("la stringa insertita è: %s\n", stringa);
+do{
+   if(stringa[i]<91&&stringa[i]>64) conta+=1;
+   i+=1;
+}while(stringa[i]|='\0');
+printf("le maiuscole sono: %d", conta);
 }
