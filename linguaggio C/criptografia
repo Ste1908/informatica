@@ -1,22 +1,26 @@
-
-
 #include <stdio.h>
 
 int main()
 {
-    char s[1000];
-    int alfabeto[26]={0};
-    scanf("%s", s);
-    do{
-    for(int i=0; i=!'\0'; i++)
-    {
-        if(s[i] == lettera) alfabeto[lettera]++;
-     
-    }
-    
-    }while()
-for(char a = 'A'; a <='Z';a++){
-    if(alfabeto[a]>0) printf ("%c", alfabeto[a]);
+char stringa[1000];
+int alfabeto[26]={0};
+char z='A';
+int contatore=0;
+float perc;
+int doppie=0;
+printf("inserisci la stringa: ");
+scanf("%s", stringa);
+for(int i=0;stringa[i]!='\0';i++){
+alfabeto[stringa[i]-65]++;
+if(stringa[i]==stringa[i+1]) doppie+=1;
+contatore+=1;
 }
-
+printf("la frequenza delle lettere è: ");
+for(int i=0;i<26;i++){
+       if(alfabeto[i]>0) {perc=(float)alfabeto[i]/contatore*100;
+            printf("\n%c : ", z);  
+            printf(" %.2f ", perc);}
+              z+=1;
+}
+printf("\nci sono %d doppie ", doppie);
 }
