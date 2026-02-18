@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+char stringa[1000];
+int alfabeto[26]={0};
+char coppie[1000];
+int coppia[1000]={0};
+char z='A';
+int contatore=0;
+float perc;
+int doppie=0;
+printf("inserisci la stringa: ");
+scanf("%s", stringa);
+for(int i=0;stringa[i]!='\0';i++){
+alfabeto[stringa[i]-65]++;
+coppie[i]=stringa[i];
+if(stringa[i]==stringa[i+1]) doppie+=1;
+contatore+=1;
+}
+
+printf("la frequenza delle lettere è: ");
+
+for(int i=0;stringa[i]!='\0';i+=2){
+    if(coppie[i]==coppie[i+2]&&coppie[i+1]==coppie[i+3]) coppia[i]++;
+}
+for(int i=0;i<26;i++){
+       if(alfabeto[i]>0) {perc=(float)alfabeto[i]/contatore*100;
+            printf("\n%c : ", z);  
+            printf(" %.2f ", perc);}
+              z+=1;
+}
+printf("le coppie di lettere e le loro frequenze sono: ");
+for(int i=0;coppie[i]!='\0';i+=2){
+    printf("\n%c%c %d ",coppie[i], coppie[i+1], coppia);
+}
+printf("\nci sono %d doppie ", doppie);
+}
