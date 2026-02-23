@@ -22,7 +22,6 @@ public class TimerUI : MonoBehaviour
             {
                 scritta.SetActive (true);
                 NPC.SetActive (false);
-
             }
         }
     }
@@ -34,5 +33,6 @@ public class TimerUI : MonoBehaviour
         testoTimer.text = string.Format("{0:00}:{1:00}", minuti, secondi);
     }
 }
+
 
 
