@@ -4,7 +4,13 @@ using TMPro;
 public class TimerUI : MonoBehaviour
 {
     public float tempoRimanente = 300f;
-    public TextMeshProUGUI testoTimer; 
+    public TextMeshProUGUI testoTimer;
+    public GameObject scritta;
+    public GameObject NPC;
+   void Start()
+    {
+        scritta.SetActive(false);
+    }
 
     void Update()
     {
@@ -12,6 +18,12 @@ public class TimerUI : MonoBehaviour
         {
             tempoRimanente -= Time.deltaTime;
             AggiornaTesto(tempoRimanente);
+            if(tempoRimanente <= 0)
+            {
+                scritta.SetActive (true);
+                NPC.SetActive (false);
+
+            }
         }
     }
 
@@ -22,4 +34,5 @@ public class TimerUI : MonoBehaviour
         testoTimer.text = string.Format("{0:00}:{1:00}", minuti, secondi);
     }
 }
+
 
