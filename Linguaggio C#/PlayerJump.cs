@@ -17,13 +17,13 @@ public class PlayerJump : MonoBehaviour
 
     void Update()
     {
-        // Controlla se il giocatore è a terra (usando un piccolo Raycast verso il basso)
+        // Controlla se il giocatore Ã¨ a terra (usando un piccolo Raycast verso il basso)
         isGrounded = Physics.Raycast(transform.position, Vector3.down, groundCheckDistance, groundMask);
 
         // Se premi Spazio e sei a terra, salta
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            // Applica forza verso l'alto (ForceMode.Impulse è ottimo per salti istantanei)
+            // Applica forza verso l'alto (ForceMode.Impulse Ã¨ ottimo per salti istantanei)
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         }
     }
