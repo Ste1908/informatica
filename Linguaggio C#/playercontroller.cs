@@ -4,17 +4,21 @@ public class playercontroller : MonoBehaviour
 {
     public float palyerspeed;
     private Rigidbody rb;
-    private int count = 0;
+    public int count = 0;
     private double time = 5.60;
     public GameObject respawnpos;
     public GameObject[] collectibles;
+    public GameObject NPC;
+    public GameObject scritta;
+    public GameObject Timer;
 
-public TextMeshProUGUI Score;
+    public TextMeshProUGUI Score;
     public TextMeshProUGUI Time;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        scritta.SetActive(false);
     }
 
     private void FixedUpdate()
@@ -30,10 +34,7 @@ public TextMeshProUGUI Score;
     // Update is called once per frame
     void Update()
     {
-        time = time - 0.000020;
-        Time.text = "Time: " + time;
-
-       
+     
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,6 +45,12 @@ public TextMeshProUGUI Score;
             count++;
             print("Punteggio: " + count);
 Score.text = "Score: " + count;
+            if (count == 10)
+            {
+                scritta.SetActive(true);
+                NPC.SetActive(false);
+            }
+
 
         }
     }
@@ -59,5 +66,8 @@ Score.text = "Score: " + count;
                 collectible.SetActive(true);
             }
         }
+        
     }
+
 }
+
