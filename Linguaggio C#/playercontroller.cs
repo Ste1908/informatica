@@ -44,6 +44,7 @@ public TextMeshProUGUI Score;
             count++;
             print("Punteggio: " + count);
 Score.text = "Score: " + count;
+
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -59,6 +60,4 @@ Score.text = "Score: " + count;
             }
         }
     }
-    
-
 }
