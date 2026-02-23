@@ -1,12 +1,14 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class NPCBehavior : MonoBehaviour
 {
-    public float speed = 2.0f; //velocità NPC
+    public float speed = 2.0f; 
     public Transform player;
     public float followDistance = 100000.0f;
     public float stopDistance = 0.0f;
     private CharacterController controller;
+    public GameObject respawnpos;
     private enum NPCState { Idle, Patrol, Chase }
     private NPCState currentState = NPCState.Idle;
     void Start()
