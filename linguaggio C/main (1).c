@@ -2,20 +2,11 @@
 
 int main()
 {
-char stringa[100];
-int chiave;
-printf("inserisci la stringa: ");
-scanf("%s", stringa);
-printf("inserisci la chiave: ");
-scanf("%d", &chiave);
-for(int i=0; stringa[i]!='\0'; i++){
-  /*  if(stringa[i]+chiave>90){
-        stringa[i]=(chiave-(90-stringa[i]))+64;
-    }else
-{
-    stringa[i]+=chiave;
-}*/
-stringa[i]=(stringa[i]-'A'- chiave)% 26+ 'A';
-   printf("%c", stringa[i]);
+char nome_1[1000];
+char nome_2[1000];
+scanf("%s", nome_1);
+scanf("%s", nome_2);
+for(int i = 0; i!='\0';i++){
+    if(nome_1[i]==nome_2[i])
 }
 }
