@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 int main()
 {
 char nome_1[1000];
@@ -15,5 +16,9 @@ scanf("%s", nome_2);
         b+=1;
     }
 }
-printf("antenata comune: %s", antenato);
+if(b==0) printf("non è presente un'antenata comune");
+else {printf("antenata comune: %s\n", antenato);
+ printf("%d di %s\n", strlen(nome_1)-b, nome_1);
+       printf("%d di %s", strlen(nome_2)-b, nome_2);
+}
 }
